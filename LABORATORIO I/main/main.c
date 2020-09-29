@@ -1,26 +1,59 @@
+/**************************************************************************
+1- suma acumulada
+2- mayor edad
+3- menor edad
+4- cantidad de mayores de edad repetida
+5- cantidad de menores de edad repetida
+6- promedio
+
+
+***************************************************************************/
+
 #include <stdio.h>
-#include <stdlib.h>
-#define TAMANIO 5
+#define TAMANIO 10
+#include "funciones.h"
 
-int main (void)
+
+int main()
 {
-    /*// EJEMPLO 1
-    int numeros [7];
-    int X=0;
 
-    do{
-        numeros [X] = 5
-        X=X+1;
-
-    } while (X<7);
-   */ //EJEMPLO 2 ARRAYS
     int edad;
-    int edades [TAMANIO];
+    int edadesArray[TAMANIO]={0,-1,2,4,10,-1,10,0,5,6};
     int i;
+    int sumaDeEdades;
+
+    sumaDeEdades=SacarLaSuma(edadesArray, TAMANIO);
+    printf("\nLa suma de las edades es: %d", sumaDeEdades);
+
+    /*for (i=0; i<TAMANIO; i++)
+    {
+        edadesArray[i]=i+3;
+    }
 
     for (i=0; i<TAMANIO; i++)
     {
-       edades [i]=5;
+        //edadesArray [i]=i+3;
+        printf ("\nIngrese su edad");
+        scanf ("%d", &edadesArray[i]);
+    */
+
+    edad = 33;
+    printf ("\nLa edad es: %d", edad);
+
+    for (i=0; i<TAMANIO; i++)
+    {
+        printf ("\nLa edadesArray[%d] es: %d",i, edadesArray[i]);
     }
 
+
+    return 0;
+
 }
+
+
+
+
+
+
+
+
